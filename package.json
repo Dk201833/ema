@@ -5,11 +5,12 @@
     "scripts": {
         "android": "react-native run-android",
         "ios": "react-native run-ios",
-        "lint": "tsc --noEmit && eslint --ext .js,.jsx,.ts,.tsx ./",
+        "lint": "eslint src --ext .ts",
         "start": "react-native start",
         "test": "jest",
         "prettier:write": "npx prettier --write **/*.{js,jsx,ts,tsx,json} && npx prettier --write *.{js,jsx,ts,tsx,json}",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "lint-staged": "lint-staged --config lint-staged.js"
     },
     "dependencies": {
         "react": "18.2.0",
@@ -25,6 +26,7 @@
         "@types/react": "^18.0.24",
         "@types/react-test-renderer": "^18.0.0",
         "@typescript-eslint/eslint-plugin": "^5.49.0",
+        "@typescript-eslint/parser": "^5.49.0",
         "babel-jest": "^29.2.1",
         "eslint": "^8.32.0",
         "eslint-config-airbnb-typescript": "^17.0.0",
